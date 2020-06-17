@@ -42,7 +42,7 @@ export default function LoginScreen() {
             <Text style={{ marginTop: 20 }}>Enter phone number</Text>
             <TextInput
                 style={{ marginVertical: 10, fontSize: 17 }}
-                placeholder="+1 999 999 9999"
+                placeholder="+212 634567898"
                 autoFocus
                 autoCompleteType="tel"
                 keyboardType="phone-pad"
