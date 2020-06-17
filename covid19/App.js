@@ -3,6 +3,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import QuizTab from './screens/tabs/QuizTab'
 import Map from './screens/tabs/Map'
+import LoginScreen from './screens/LoginScreen'
 import { FontAwesome, Ionicons } from '@expo/vector-icons';
 
 const Tab = createBottomTabNavigator();
@@ -35,6 +36,7 @@ export default function App() {
           inactiveTintColor: 'gray',
         }}
       >
+        <Tab.Screen name="Login" component={LoginScreen} />
         <Tab.Screen name="Quizz" component={QuizTab} />
         <Tab.Screen name="Map" component={QuizTab} />
       </Tab.Navigator>
