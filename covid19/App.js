@@ -36,7 +36,7 @@ export default function App() {
         }}
       >
         <Tab.Screen name="Quizz" component={QuizTab} />
-        <Tab.Screen name="Map" component={QuizTab} />
+        <Tab.Screen name="Map" component={Map} />
       </Tab.Navigator>
     </NavigationContainer>
   );
