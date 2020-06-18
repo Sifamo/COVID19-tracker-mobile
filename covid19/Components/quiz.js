@@ -181,7 +181,7 @@ export default class Quiz extends Component {
 			this.qno++;
 
 			this.setState({
-				countCheck: 0,
+				//countCheck: 0,
 				question: arrnew[this.qno].question,
 				options: arrnew[this.qno].options,
 				correctoption: arrnew[this.qno].correctoption,
@@ -223,7 +223,7 @@ export default class Quiz extends Component {
 		});
 
 		return (
-			<ScrollView style={{ backgroundColor: '#A5FAAFF', paddingTop: 10 }}>
+			<ScrollView style={{ backgroundColor: '#A5FAAFF', paddingTop: 80 }}>
 				<Text style={styles.QusetionNbr}>Question {(this.qno + 1).toString()} sur 16</Text>
 				<View style={styles.container}>
 					<View
@@ -239,12 +239,6 @@ export default class Quiz extends Component {
 						</View>
 						<View>{options}</View>
 						<View style={{ flexDirection: 'row' }}>
-							{/*   <Button
-          onPress={() => this.prev()}
-          title="Prev"
-          color="#841584"
-        />
-        <View style={{margin:15}} />*/}
 							<TouchableOpacity onPress={() => this.prev()}>
 								<View
 									style={{
@@ -252,7 +246,7 @@ export default class Quiz extends Component {
 										paddingBottom: 5,
 										paddingRight: 50,
 										paddingLeft: 20,
-										borderRadius: 10,
+										borderRadius: 15,
 										marginRight: 20,
 										backgroundColor: '#0066CC',
 									}}
@@ -268,7 +262,7 @@ export default class Quiz extends Component {
 										paddingBottom: 5,
 										paddingRight: 20,
 										paddingLeft: 50,
-										borderRadius: 10,
+										borderRadius: 15,
 										backgroundColor: '#0066CC',
 									}}
 								>
