@@ -58,7 +58,8 @@ componentWillUnmount() {
                      <Circle
                         key= {element.name}
                         center={{ latitude: element.latitude, longitude: element.longitude }}
-                        radius={element.case*25}
+                        //radius={element.case*25}
+                        radius = {300}
                        fillColor={'rgba(200, 300, 200, 0.5)'}
                     >
                          

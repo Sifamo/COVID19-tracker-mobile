@@ -7,7 +7,20 @@ import { FontAwesome, Ionicons } from '@expo/vector-icons';
 
 const Tab = createBottomTabNavigator();
 
-export default function App() {
+export default class App extends React.Component{
+  constructor(props){
+    super (props);
+    this.state = {
+      healthStatus: null,
+      location: null
+    };
+  }
+
+  changeHealthStatus(value){
+    this.setState({ healthStatus: value,});
+  }
+
+  render() {
   return (
     <NavigationContainer>
       <Tab.Navigator
@@ -35,9 +48,16 @@ export default function App() {
           inactiveTintColor: 'gray',
         }}
       >
-        <Tab.Screen name="Quizz" component={QuizTab} />
-        <Tab.Screen name="Map" component={Map} />
+        <Tab.Screen name="Quizz" >
+          {() =>  <QuizTab healthStatus={this.state.healthStatus} changeHealthStatus={this.changeHealthStatus.bind(this)}/>}
+        </Tab.Screen>
+
+        <Tab.Screen name="Map" >
+          {() =>  <Map location="testProp" changeHealthStatus={this.changeHealthStatus.bind(this)}/>}
+        </Tab.Screen>
+
       </Tab.Navigator>
     </NavigationContainer>
   );
+      }
 }
