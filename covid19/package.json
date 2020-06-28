@@ -25,12 +25,9 @@
     "react-native-screens": "~2.2.0",
     "react-native-vector-icons": "^6.6.0",
     "react-native-web": "~0.11.7",
-<<<<<<< HEAD
     "react-native-maps": "0.26.1",
-    "expo-location": "~8.1.0"
-=======
+    "expo-location": "~8.1.0",
     "react-native-webview": "8.1.1"
->>>>>>> 452883d29f6b9aa79b945bd3cf46a5d442c566f7
   },
   "devDependencies": {
     "babel-preset-expo": "~8.1.0",
