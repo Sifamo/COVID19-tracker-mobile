@@ -3,6 +3,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import QuizTab from './screens/tabs/QuizTab'
 import Map from './screens/tabs/Map'
+import LoginScreen from './screens/LoginScreen'
 import { FontAwesome, Ionicons } from '@expo/vector-icons';
 
 const Tab = createBottomTabNavigator();
@@ -48,6 +49,7 @@ export default class App extends React.Component{
           inactiveTintColor: 'gray',
         }}
       >
+        <Tab.Screen name="Login" component={LoginScreen} />
         <Tab.Screen name="Quizz" >
           {() =>  <QuizTab healthStatus={this.state.healthStatus} changeHealthStatus={this.changeHealthStatus.bind(this)}/>}
         </Tab.Screen>
@@ -56,6 +58,8 @@ export default class App extends React.Component{
           {() =>  <Map location="testProp" changeHealthStatus={this.changeHealthStatus.bind(this)}/>}
         </Tab.Screen>
 
+        
+        
       </Tab.Navigator>
     </NavigationContainer>
   );
