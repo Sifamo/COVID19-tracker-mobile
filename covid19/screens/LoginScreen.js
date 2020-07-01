@@ -10,7 +10,6 @@ import * as config from '../config'
   firebase.initializeApp({
     ...
   });
-
 } catch (err) {
   // ignore app already initialized error in snack
 }*/
